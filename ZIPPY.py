@@ -1,3 +1,6 @@
+#Written by: Aertemis Solomon
+#ZIPPY: Python .tar File Compressor and File Extraction
+
 import tkinter as tk
 import tkinter.filedialog as filedialog
 import tkinter.messagebox as messagebox
@@ -80,3 +83,29 @@ decompress_button.grid(row=2, column=1, padx=10, pady=10)
 
 # Start the GUI event loop
 window.mainloop()
+#function is triggered when the "Compress" button is clicked, and the `decompress_file()` function is triggered when the "Decompress" button is clicked.
+
+#In the `compress_file()` function:
+#1. The source file and destination file paths are obtained from the entry fields.
+#2. It checks if both the source and destination file paths are provided. If either is missing, an error message is displayed.
+#3. If both paths are provided, it tries to compress the file using the `tarfile` module. The source file is added to a tar archive with the specified destination file path.
+#4. If any errors occur during compression, an error message is displayed.
+
+#In the `decompress_file()` function:
+#1. The source file and destination file paths are obtained from the entry fields.
+#2. It checks if both the source and destination file paths are provided. If either is missing, an error message is displayed.
+#3. If both paths are provided, it tries to decompress the file using the `tarfile` module. The contents of the tar archive are extracted to the specified destination folder.
+#4. If any errors occur during decompression, an error message is displayed.
+
+#The `browse_source_file()` and `browse_destination_file()` functions open file dialogs to allow the user to browse and select the source and destination files respectively.
+
+#The program creates a graphical user interface (GUI) window using Tkinter's widgets such as labels, entry fields, and buttons. The GUI provides an intuitive way for users to input file paths and trigger the compression or decompression process.
+
+#To run the program, ensure you have Python and Tkinter installed. Save the code to a Python file (e.g., `compression_tool.py`) and execute it using `python compression_tool.py` in your terminal or command prompt.
+
+#Upon running the program, a window will appear with fields to enter the source file path, destination file path, and buttons to compress or decompress the file. Clicking the "Browse" buttons allows you to select the files using a file dialog. After providing the necessary file paths, click the "Compress" or "Decompress" button to perform the corresponding operation.
+
+#Error handling is incorporated to display informative error messages if any issues occur during compression or decompression.
+
+#This Python program provides beginners with a basic understanding of how to create a file compression tool with a GUI using Tkinter. Feel free to explore and enhance the program based on your requirements and preferences.
+
